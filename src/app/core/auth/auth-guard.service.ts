@@ -17,6 +17,7 @@ export class AuthGuardService implements CanActivate {
       this.oauthService.initImplicitFlow();
       return false;
     }
+
     return true;
   }
 }

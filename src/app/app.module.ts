@@ -6,16 +6,18 @@ import { AppRoutingModule } from './app-routing.module';
 import { OAuthModule, OAuthStorage } from 'angular-oauth2-oidc';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
-import { NavbarComponent } from './navbar/navbar.component';
+import { NavbarComponent } from './core/navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
-import { AuthService } from './auth/auth.service';
-import { AuthGuardService } from './auth/auth-guard.service';
+import { AuthService } from './core/auth/auth.service';
+import { AuthGuardService } from './core/auth/auth-guard.service';
+import { ListsComponent } from './modules/lists/lists.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    HomeComponent
+    HomeComponent,
+    ListsComponent
   ],
   imports: [
     BrowserModule,
