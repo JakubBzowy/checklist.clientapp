@@ -15,6 +15,11 @@ export class AuthGuardService implements CanActivate {
   {
     if (!this.auth.isAuthenticated()) {
       this.oauthService.initImplicitFlow();
+      this.oauthService.tryLogin({
+        onTokenReceived: (info) => {
+            console.debug('state', info.state);
+        }
+      })
       return false;
     }
 

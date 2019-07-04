@@ -14,8 +14,6 @@ export class AuthService {
   public isAuthenticated(): boolean 
   {
     const token = this.oauthService.getAccessToken();
-    //test 
-    console.log(this.helper.decodeToken(token))
     // Check whether the token is expired and return
     // true or false
     return !this.helper.isTokenExpired(token);
